@@ -25,16 +25,13 @@ const showMessage = (result) => {
   let message = "";
   let resultado = document.querySelector(".resultado");
   if (result === "win") {
-    message = "Ganaste"
-    return resultado.innerHTML = `<h2>${message}</h2>`;;
+    message = "Ganaste";
   } else if (result === "lose") {
-    message = "perdiste"
-    return resultado.innerHTML = `<h2>${message}</h2>`;
+    message = "perdiste";
   } else {
-    message = "Empataste"
-    return resultado.innerHTML = `<h2>${message}</h2>` ;
+    message = "Empataste";
   }
-  ;
+  return (resultado.innerHTML = `<h2>${message}</h2>`);
 };
 
 const juego = (event) => {
@@ -43,7 +40,4 @@ const juego = (event) => {
   let entrada = document.querySelector("#input").value;
   let result = getResult(computerSelection, entrada);
   let showmessage = showMessage(result);
-  
 };
-
-
